@@ -45,7 +45,6 @@ export default class App extends Component {
 
   bubbleSort = async () => {
     const { lengths } = this.state;
-    let tmp = 0;
     let changed = false;
     this.setState({
       sorting: true,
@@ -70,7 +69,7 @@ export default class App extends Component {
         <ButtonStyled onClick={() => this.bubbleSort()} disabled={sorting}>Bubble Sort</ButtonStyled>
         <ButtonStyled onClick={() => this.reset()} disabled={sorting}>Reset</ButtonStyled>
         {
-          lengths.map((length, index) => <BarStyled key={length} length={length} />)
+          lengths.map(length => <BarStyled key={length} length={length} />)
         }
       </Fragment>
     );

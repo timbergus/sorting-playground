@@ -1,7 +1,17 @@
 {
   "cSpell.words": [
     "cadetblue",
-    "polyfill"
+    "camelcase",
+    "eqeqeq",
+    "iife",
+    "linebreak",
+    "multiline",
+    "paren",
+    "parens",
+    "plusplus",
+    "polyfill",
+    "proto",
+    "readonly"
   ],
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
