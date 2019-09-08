@@ -11,7 +11,7 @@ export default class App extends Component {
   state = {
     lengths: [],
     sorting: false,
-  }
+  };
 
   componentDidMount() {
     const lengths = [];
@@ -24,16 +24,19 @@ export default class App extends Component {
     });
   }
 
-  swap = (a, b) => new Promise(resolve => setTimeout(() => {
-    const { lengths } = this.state;
-    let tmp = lengths[a];
-    lengths[a] = lengths[b];
-    lengths[b] = tmp;
-    this.setState({
-      lengths,
-    });
-    resolve(true);
-  }, 0));
+  swap = (a, b) =>
+    new Promise(resolve =>
+      setTimeout(() => {
+        const { lengths } = this.state;
+        let tmp = lengths[a];
+        lengths[a] = lengths[b];
+        lengths[b] = tmp;
+        this.setState({
+          lengths,
+        });
+        resolve(true);
+      }, 0),
+    );
 
   reset = () => {
     const { lengths } = this.state;
@@ -41,7 +44,7 @@ export default class App extends Component {
     this.setState({
       lengths,
     });
-  }
+  };
 
   bubbleSort = async () => {
     const { lengths } = this.state;
@@ -56,21 +59,25 @@ export default class App extends Component {
           changed = await this.swap(i, i + 1);
         }
       }
-    } while(changed);
+    } while (changed);
     this.setState({
       sorting: false,
     });
-  }
+  };
 
   render() {
     const { lengths, sorting } = this.state;
     return (
       <Fragment>
-        <ButtonStyled onClick={() => this.bubbleSort()} disabled={sorting}>Bubble Sort</ButtonStyled>
-        <ButtonStyled onClick={() => this.reset()} disabled={sorting}>Reset</ButtonStyled>
-        {
-          lengths.map(length => <BarStyled key={length} length={length} />)
-        }
+        <ButtonStyled onClick={() => this.bubbleSort()} disabled={sorting}>
+          Bubble Sort
+        </ButtonStyled>
+        <ButtonStyled onClick={() => this.reset()} disabled={sorting}>
+          Reset
+        </ButtonStyled>
+        {lengths.map(length => (
+          <BarStyled key={length} length={length} />
+        ))}
       </Fragment>
     );
   }
