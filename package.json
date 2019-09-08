@@ -1,18 +1,23 @@
 {
   "name": "sorting-playground",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a playground to implement sorting algorithms.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
+    "test": "npm run eslint && npm run flow && npm run jest",
     "eslint": "eslint src/**/*.{js,jsx}",
     "flow": "flow",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "jest": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "eslint",
+    "jest"
+  ],
+  "author": "Gustavo Muñoz <timbergus@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
     "react": "^16.9.0",
@@ -27,15 +32,19 @@
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
     "babel-plugin-styled-components": "^1.10.6",
     "css-loader": "^3.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "^6.3.0",
     "eslint-config-prettier": "^6.2.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
     "flow-bin": "^0.107.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
     "node-sass": "^4.12.0",
     "prettier": "1.18.2",
     "sass-loader": "^8.0.0",

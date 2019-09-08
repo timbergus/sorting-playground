@@ -1,9 +1,13 @@
 {
   "cSpell.words": [
+    "Serializers",
+    "automock",
     "cadetblue",
     "camelcase",
     "eqeqeq",
+    "gmail",
     "iife",
+    "lcov",
     "linebreak",
     "multiline",
     "paren",
@@ -11,7 +15,9 @@
     "plusplus",
     "polyfill",
     "proto",
-    "readonly"
+    "readonly",
+    "timbergus",
+    "unmocked"
   ],
   "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,

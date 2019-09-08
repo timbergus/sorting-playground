@@ -33,6 +33,8 @@
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
-    "module": "readonly"
+    "module": "readonly",
+    "test": "readonly",
+    "expect": "readonly"
   }
 }
