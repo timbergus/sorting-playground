@@ -1,13 +1,22 @@
+// @flow
+
 import React, { Component, Fragment } from 'react';
 
 import BarStyled from './bar.styled';
 import ButtonStyled from './button.styled';
 
+interface Props {}
+
+interface State {
+  lengths: Array<number>;
+  sorting: boolean;
+}
+
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
 
-export default class App extends Component {
+export default class App extends Component<Props, State> {
   state = {
     lengths: [],
     sorting: false,
@@ -24,8 +33,8 @@ export default class App extends Component {
     });
   }
 
-  swap = (a, b) =>
-    new Promise(resolve =>
+  swap = (a: number, b: number) =>
+    new Promise<boolean>(resolve =>
       setTimeout(() => {
         const { lengths } = this.state;
         let tmp = lengths[a];
