@@ -49,9 +49,9 @@ const BubbleSort = () => {
   };
 
   const swap = (a: number, b: number) =>
-    new Promise<boolean>((resolve) =>
+    new Promise<boolean>(resolve =>
       setTimeout(() => {
-        let tmp = lengths[a];
+        const tmp = lengths[a];
         lengths[a] = lengths[b];
         lengths[b] = tmp;
         setLengths([...lengths]);
